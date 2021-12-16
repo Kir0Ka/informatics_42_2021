@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void place(int *x, int *y, int *z);
+void place(int *x, int *y, int *z); //Объявление функции
 
 int main()
 {
@@ -10,16 +10,16 @@ int main()
     cin>> x;
     cin>> y;
     cin>> z;
-    place(&x, &y, &z);
+    place(&x, &y, &z); //Передача в функцию аргументов по ссылке
     cout<<" "<<endl;
     cout<<"Now it's changed"<<endl;
     cout<<x<<" "<<y<<" "<<z<<endl;
     return 0;
 }
 
-void place(int *x, int *y, int *z)
+void place(int *x, int *y, int *z) //Определение функции
 {
-    int o = *x;
+    int o = *x; // Разыменование указателя
     *x=*x-55;
     *y=*y-4;
     *z=*z+100;
